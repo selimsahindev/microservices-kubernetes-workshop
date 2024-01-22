@@ -12,6 +12,9 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
+// Seed the database.
+PrepDb.PrepPopulation(app);
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
